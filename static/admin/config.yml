@@ -1,0 +1,24 @@
+backend:
+  name: github
+  repo: cathyldd/SmartPaw
+  branch: main
+media_folder: "static/images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "reviews"
+    label: "Product Reviews 产品测评"
+    folder: "content/reviews"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Featured Image 封面图", name: "image", widget: "image"}
+      - {label: "ASIN", name: "asin", widget: "string"}
+      - {label: "Rating(1-5)", name: "rating", widget: "number", min: 1, max: 5, step: 0.1}
+      - {label: "Pros 优点", name: "pros", widget: "list"}
+      - {label: "Cons 缺点", name: "cons", widget: "list"}
+      - {label: "正文内容", name: "body", widget: "markdown"}
+      - {label: "FTC Affiliate Disclosure 联盟免责", name: "ftc", widget: "boolean", default: true}
+      - {label: "Tags 标签", name: "tags", widget: "list"}
