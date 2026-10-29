@@ -2,6 +2,10 @@ backend:
   name: github
   repo: cathyldd/SmartPaw
   branch: main
+  auth_type: implicit
+  base_url: https://smartpaw-gadgets.cathyldd.workers.dev
+  site_domain: https://smartpaw-gadgets.cathyldd.workers.dev
+
 media_folder: "static/images/uploads"
 public_folder: "/images/uploads"
 
